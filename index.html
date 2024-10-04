@@ -6,7 +6,9 @@
     <title>To-Do-List</title>
   </head>
   <body>
+    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmZzZzV4bG0wdWFtdXBnMGNvNmFremxxb3J6czFmODZkeHMwaXJkbSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/GcSqyYa2aF8dy/giphy.webp" alt="" style="width:1000px; height: 300px; margin:30px;border-radius:20px;"  >
     <div class="To-do">
+      <h1>JUST DO IT</h1>
       <input type="text" class="Text-input" placeholder="Enter Your Task" />
       <button class="add-task">Add</button>
       <button class="delete-task">Delete</button>
@@ -22,8 +24,9 @@
   height: 100vh;
   background-color: #212121;
   color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
   margin: 0;
+  padding: 0;
 }
 
 .To-do {
@@ -31,8 +34,9 @@
   flex-direction: column;
   align-items: center;
   background-color: #333;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 30px;
+  gap:5px;
+  border-radius: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -46,20 +50,22 @@
   color: #fff;
   font-size: 16px;
   outline: none;
+  border-radius: 20px;
 }
 
 .Text-input::placeholder {
   color: #bbb;
+  text-align: center;
 }
 
 button {
   width: 150px;
   padding: 10px;
-  margin: 5px 0;
+  margin: 5px 0px;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   background-color: #ff5722;
-  color: #fff;
+  color: rgba(254, 254, 61, 0.916);
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s;
@@ -78,13 +84,18 @@ button:hover {
 
 .task-list li {
   background-color: #444;
-  margin: 5px 0;
+  margin: 5px 0px;
   padding: 10px;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 16px;
+}
+li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .task-list li.completed {
@@ -188,43 +199,36 @@ button:hover {
 };
 }
   addBtn.addEventListener('click', function() {
-    const title = inputText.value.trim();
-    const taskManager = new TaskManager();
-
-    
-    if (title !== "") {
-        // Create a new Task object
-        const newTask = new Task(Date.now(), title); // Use Date.now() for unique IDs
-        
-        // Add the task to the task manager
-        taskManager.addTask(newTask);
-        
-        // Clear the input field after adding
-        inputText.value = "";
-    } else {
-        alert("Please enter a task title");
-    }
+    //get title , call the taskmanager class to manage the task and render the ui .
+  const title  = inputText.value;
+  const taskManager =  new TaskManager;
+    // if there is no title or input is empty then alert , enter a task title.
+    //else create new task, add to taskmanager,clear current input after adding task.
+   if(title===""){
+  alert("Please Enter an Input");
+   }
+   else{
+    const task = new Task(Date.now(),title);
+    taskManager.addTask(task);
+    inputText.innerHTML = "";
+   }
 });
 deleteBtn.addEventListener('click', function() {
+  // prompt the id. 
     const id = prompt("Enter the ID of the task to delete:");
+    // enter task to delete when clicked on delete button.
     const taskManager = new TaskManager();
-
-    if (id !== null && id !== "") {
-        taskManager.removeTask(parseInt(id));
-    } else {
-        alert("Invalid ID");
-    }
+// if id is empty , enter invalid id , else remove the task from task manager.
+   if(id===""){
+    alert("Invalid Id");
+   }
+   else{
+    taskManager.removeTask(parseInt(id));
+   }
 });
-taskList.addEventListener('dblclick', function(e) {
-
-    if (e.target.tagName === "LI") {
-        const taskId = e.target.getAttribute("data-id");
-        const newTitle = prompt("Enter a new title:");
-
-        if (newTitle) {
-            TaskManager.updateTask(parseInt(taskId), newTitle);  // Edit the title
-        }
-    }
-});
-
 </script>
+
+
+
+
+
