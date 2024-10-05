@@ -6,7 +6,7 @@
     <title>To-Do-List</title>
   </head>
   <body>
-    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmZzZzV4bG0wdWFtdXBnMGNvNmFremxxb3J6czFmODZkeHMwaXJkbSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/GcSqyYa2aF8dy/giphy.webp" alt="" style="width:1000px; height: 300px; margin:30px;border-radius:20px;"  >
+    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmZzZzV4bG0wdWFtdXBnMGNvNmFremxxb3J6czFmODZkeHMwaXJkbSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/GcSqyYa2aF8dy/giphy.webp" alt="" style="width:1000px; height: 300px; margin:30px;border-radius:20px;">
     <div class="To-do">
       <h1>JUST DO IT</h1>
       <input type="text" class="Text-input" placeholder="Enter Your Task" />
@@ -16,105 +16,104 @@
     </div>
   </body>
   <style>
-   body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #212121;
-  color: #fff;
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-}
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #212121;
+      color: #fff;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-.To-do {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #333;
-  padding: 30px;
-  gap:5px;
-  border-radius: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+    .To-do {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #333;
+      padding: 30px;
+      gap: 5px;
+      border-radius: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
 
-.Text-input {
-  width: 300px;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #444;
-  border-radius: 5px;
-  background-color: #444;
-  color: #fff;
-  font-size: 16px;
-  outline: none;
-  border-radius: 20px;
-}
+    .Text-input {
+      width: 300px;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #444;
+      border-radius: 5px;
+      background-color: #444;
+      color: #fff;
+      font-size: 16px;
+      outline: none;
+      border-radius: 20px;
+    }
 
-.Text-input::placeholder {
-  color: #bbb;
-  text-align: center;
-}
+    .Text-input::placeholder {
+      color: #bbb;
+      text-align: center;
+    }
 
-button {
-  width: 150px;
-  padding: 10px;
-  margin: 5px 0px;
-  border: none;
-  border-radius: 20px;
-  background-color: #ff5722;
-  color: rgba(254, 254, 61, 0.916);
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s;
-}
+    button {
+      width: 150px;
+      padding: 10px;
+      margin: 5px 0px;
+      border: none;
+      border-radius: 20px;
+      background-color: #ff5722;
+      color: rgba(254, 254, 61, 0.916);
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
 
-button:hover {
-  background-color: #e64a19;
-}
+    button:hover {
+      background-color: #e64a19;
+    }
 
-.task-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
+    .task-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
 
-.task-list li {
-  background-color: #444;
-  margin: 5px 0px;
-  padding: 10px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 16px;
-}
-li{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    .task-list li {
+      background-color: #444;
+      margin: 5px 0px;
+      padding: 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+    }
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-.task-list li.completed {
-  text-decoration: line-through;
-  color: #888;
-}
+    .task-list li.completed {
+      text-decoration: line-through;
+      color: #888;
+    }
 
-.task-list li button {
-  background-color: #d32f2f;
-  width: auto;
-  padding: 5px 10px;
-  margin: 0;
-  font-size: 14px;
-}
+    .task-list li button {
+      background-color: #d32f2f;
+      width: auto;
+      padding: 5px 10px;
+      margin: 0;
+      font-size: 14px;
+    }
 
-.task-list li button:hover {
-  background-color: #c62828;
-}
-
+    .task-list li button:hover {
+      background-color: #c62828;
+    }
   </style>
 </html>
 <script>
@@ -122,113 +121,95 @@ li{
   const addBtn = document.querySelector(".add-task");
   const deleteBtn = document.querySelector(".delete-task");
   const taskList = document.querySelector(".task-list");
+
   class Task {
-    constructor(id, title, isCompleted = false) {
-      this.id = id;
+    constructor(title, isCompleted = false) {
       this.title = title;
       this.isCompleted = isCompleted;
     }
-    getId() {
-      return this.id;
-    }
+
     getTitle() {
       return this.title;
     }
+
     toggleCompleted() {
-      //toggle tasks if completed .
       this.isCompleted = !this.isCompleted;
     }
-    // edit the title.
+
     editTitle(newTitle) {
       this.title = newTitle;
     }
   }
+
   class TaskManager {
     constructor() {
-      this.tasks = []; //array to add tasks.
+      this.tasks = [];
     }
- 
+
     render() {
-      //empty out taskList before rendering ui for each task.
       taskList.innerHTML = "";
-      //create new Child , set display and id , add it to parent taskList for each task in array.
-      this.tasks.forEach((task) => {
+      this.tasks.forEach((task, index) => {
         const li = document.createElement("li");
-        li.innerHTML = task.getTitle(); 
-        li.setAttribute("data-id", task.getId());
-        // if task is completed , create it a class completed for further editing and display and ui. basically added this for css, again chatgpt wrote this one line , rest i wrote.
+        li.innerHTML = `${index + 1}. ${task.getTitle()}`; // Display task title with index
+        li.setAttribute("data-index", index);
+
+        // Toggle task completion on click
         if (task.isCompleted) {
-          li.classList.add ("completed."); //for styling , no use tbh.
+          li.classList.add("completed");
         }
+
+        li.addEventListener("click", () => {
+          this.updateTask(index);
+        });
+
         taskList.appendChild(li);
       });
     }
 
     addTask(task) {
-        //add the task to list and re render ui.
-      this.tasks.push(task); 
+      this.tasks.push(task); // Add task to the list
       this.render();
     }
-    removeTask(id) {
-        // filter out tasks which have that id, basically remove them. idk why chatgpt wrote in a smartass way and re render ui as well.
-        this.tasks = this.tasks.filter(function(task) {
-    if (task.getId() !== id) {
-        return true;  // Keep the task if the ID does not match
-    } else {
-        return false; // Exclude the task if the ID matches
+
+    removeTask(index) {
+      this.tasks.splice(index, 1); // Remove task at the given index
+      this.render(); // Re-render to update UI
     }
-});
-    this.render();
-    }
-    updateTask(id, newTitle = null) {
-    // Find the task by its ID
-   const task = this.tasks.find(task=>task.getId()===id);
-    
-    if (task) {
-        // If a new title is provided, update the task title
+
+    updateTask(index, newTitle = null) {
+      const task = this.tasks[index];
+      if (task) {
         if (newTitle !== null) {
-            task.editTitle(newTitle);
+          task.editTitle(newTitle);
         }
-
-        // Toggle the task's completion status
         task.toggleCompleted();
-        
-        // Re-render the updated task list
         this.render();
+      }
     }
-};
-}
-  addBtn.addEventListener('click', function() {
-    //get title , call the taskmanager class to manage the task and render the ui .
-  const title  = inputText.value;
-  const taskManager =  new TaskManager;
-    // if there is no title or input is empty then alert , enter a task title.
-    //else create new task, add to taskmanager,clear current input after adding task.
-   if(title===""){
-  alert("Please Enter an Input");
-   }
-   else{
-    const task = new Task(Date.now(),title);
-    taskManager.addTask(task);
-    inputText.innerHTML = "";
-   }
-});
-deleteBtn.addEventListener('click', function() {
-  // prompt the id. 
-    const id = prompt("Enter the ID of the task to delete:");
-    // enter task to delete when clicked on delete button.
-    const taskManager = new TaskManager();
-// if id is empty , enter invalid id , else remove the task from task manager.
-   if(id===""){
-    alert("Invalid Id");
-   }
-   else{
-    taskManager.removeTask(parseInt(id));
-   }
-});
+  }
+
+  // Declare and initialize TaskManager globally
+  const taskManager = new TaskManager();
+
+  // Event listener for adding tasks
+  addBtn.addEventListener("click", function () {
+    const title = inputText.value;
+    if (title !== "") {
+      const task = new Task(title); // Create new task with title
+      taskManager.addTask(task); // Add task to task manager
+      inputText.value = ""; // Clear input field
+    } else {
+      alert("Please Enter an Input");
+    }
+  });
+
+  // Event listener for deleting tasks
+  deleteBtn.addEventListener("click", function () {
+    const index = prompt("Enter the number of the task to delete:");
+    if (index && !isNaN(index)) {
+      taskManager.removeTask(parseInt(index) - 1); // Convert input to index (1-based to 0-based)
+    } else {
+      alert("Invalid Task Number");
+    }
+  });
 </script>
-
-
-
-
-
